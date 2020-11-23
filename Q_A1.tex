@@ -1,0 +1,41 @@
+% Roll Number 51, Rashad K
+
+\textbf{\textcolor{LightMagenta}{Distinguish between classification and regression with an example. (Dec 2018) \hfill 4 marks}} \\[5pt]
+Both regression and classification are supervised learning problems in machine learning where there is an input X, output Y and the task is to learn mapping from input to output.\\
+Output Y is \\
+    \hspace*{10pt} 1. a number in regression \\
+    \hspace*{10pt} 2. a class code in the case of classification. \\
+   
+\textcolor{purple}{\underline{\smash{Classification}}}: Identification of class to which a data belongs It is the task of approximating a mapping function (f) from input variables (X) to discrete output variables (y).
+
+The output variables are often called labels or categories. The mapping function predicts the class or category for a given observation.
+
+For example, an email of text can be classified as belonging to one of two classes: “spam" and “not spam“.
+\begin{itemize}
+    \item A classification problem requires that examples be classified into one of two or more classes.
+\item Classification can have real-valued or discrete input variables.
+\item Problem with two classes is often called a two-class or binary classification problem.
+\item Problem with more than two classes is often called a multi-class classification problem.
+\item Problem where an example is assigned multiple classes is called a multi-label classification problem.
+\end{itemize}
+It is common for classification models to predict a continuous value as the probability of a given example belonging to each output class. The probabilities can be interpreted as the likelihood or confidence of a given example belonging to each class. A predicted probability can be converted into a class value by selecting the class label that has the highest probability.
+
+A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam. The idea is to make an algorithm that can learn characteristics of spam emails from this training set so that it can filter out spam emails when it encounters new emails. .
+
+A specific email of text may be assigned the probabilities of 0.1 as being “spam” and 0.9 as being “not spam”. We can convert these probabilities to a class label by selecting the “not spam” label as it has the highest predicted likelihood. \\
+
+\textcolor{purple}{\underline{\smash{Regression}}} is the task of approximating a mapping function (f) from input variables (X) to a continuous output variable (y).
+
+A continuous output variable is a real-value, such as an integer or floating point value. These are often quantities, such as amounts and sizes.
+
+For example, a house may be predicted to sell for a specific price , perhaps in the range of  Rs 100,000 to Rs 200,000 by looking into a whole bunch of exogenous variables such as neighbourhood, location, bathrooms in the house, bedrooms, how far is it from the city .Thus here the input variables are neighbourhood, location, bathrooms in the house, bedrooms, how far is it from the city and the output variable is price of the house.  Another example include predicting the number of death cases world wide due to COVID-19 for next 10 days using the help of previous COVID-19 death cases' time series table as training  dataset which is used to train the regression model
+\begin{itemize}
+    
+\item A regression problem requires the prediction of a quantity.
+\item A regression can have real valued or discrete input variables.
+\item A problem with multiple input variables is often called a multivariate regression problem.
+\item A regression problem where input variables are ordered by time is called a time series forecasting problem.
+\end{itemize}
+
+A classification algorithm may predict a continuous value, but the continuous value is in the form of a probability for a class label.
+A regression algorithm may predict a discrete value, but the discrete value in the form of an integer quantity.

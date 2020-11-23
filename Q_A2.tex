@@ -1,0 +1,17 @@
+% Roll number 14, Annarose M B
+
+\textbf{\textcolor{LightMagenta}{Briefly describe the concept of Expectation Maximization algorithm. (Dec 2018) \hfill 4 marks}} \\[5pt]
+The expectation-maximization algorithm (EM algorithm)  is an approach for performing maximum likelihood estimation in the presence of latent variables. It does this by first estimating the values for the latent variables, then optimizing the model, then repeating these two steps until convergence. It is an effective and general approach and is most commonly used for density estimation with missing data, such as clustering algorithms like the Gaussian Mixture Model.
+
+The maximum likelihood estimation method (MLE) is a method for estimating the parameters of a statistical model, given observations. The method attempts to find the parameter values that maximize the likelihood function, or equivalently the log-likelihood function, given the observations. The expectation-maximisation algorithm is used to find maximum likelihood estimates of the parameters of a statistical model in cases where the equations cannot be solved directly. These models generally involve latent or unobserved variables in addition to unknown parameters and known data observations. For example, a Gaussian mixture model can be described by assuming that each observed data point has a corresponding unobserved data point, or latent variable, specifying the mixture component to which each data point belongs.\\
+
+\textcolor{purple}{\underline{\smash{Algorithm}}:}
+
+\begin{itemize}
+    \item Given a set of incomplete data, consider a set of starting parameters.
+    \item \textcolor{ReddishRose}{\underline{\smash{Expectation step (E – step)}}:} Using the observed available data of the dataset, estimate (guess) the values of the missing data.
+    \item \textcolor{ReddishRose}{\underline{\smash{Maximization step (M – step)}}:} Complete data generated after the expectation (E) step is used in order to update the parameters.
+    \item Repeat step 2 and step 3 until convergence.
+\end{itemize}
+
+In the case of Gaussian mixture problems, because of the nature of the function, finding a maximum likelihood estimate by taking the derivatives of the log-likelihood function with respect to all the parameters and simultaneously solving the resulting equations is nearly impossible. So we apply the EM algorithm to solve the problem.

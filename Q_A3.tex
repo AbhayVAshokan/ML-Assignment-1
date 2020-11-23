@@ -1,0 +1,47 @@
+% Roll number 41, Krishna K    
+    
+\textbf{
+    \textcolor{LightMagenta}{
+        A patient takes a lab test and the result comes back positive. It is known that the test  returns  a  correct  positive result  in  only  98\%  of  the  cases  and  a  correct negative  result  in  only  97\%  of  the  cases.  Furthermore,  only  0.008  of  the  entire population has this disease.
+        \textbf{
+            \begin{enumerate}
+                \item What is the probability that this patient has cancer?
+                \item What is the probability that he does not have cancer?
+                \item What is the diagnosis? (May 2019) \textbf{\hfill 4 marks} \\[5pt]
+            \end{enumerate}
+        }
+    }
+}
+From the given data, we can determine the following probabilities
+
+P(cancer) = 0.008 \\
+P(¬ cancer) = 1 - 0.008 = 0.992 \\
+P(+ve $|$ cancer) = 0.98 \\
+P(-ve $|$ cancer) = 1 - 0.98 = 0.02 \\
+P(-ve $|$ ¬ cancer) = 0.97 \\
+P(+ve $|$ ¬ cancer) = 1 - 0.97 = 0.03 
+
+According to Bayes theorem: 
+\begin{equation*}
+    P(A | B) = \frac{P(B | A) * P(A)}{P(B)}
+\end{equation*}
+
+\begin{enumerate}
+    \item Using Bayes formula:
+    \begin{align*}
+       P(cancer | +ve) &= \frac{P(+ve | cancer) \ast P(cancer)}{P(+ve)} \\[10pt]
+                        &= \frac{P(+ve | cancer) \ast P(cancer)}{P(+ve | cancer) \ast P(cancer)+P(+ve | \neg cancer) \ast P(\neg cancer)} \\[10pt]
+                        &= \frac{0.98 * 0.008}{0.98 * 0.008 + 0.03 * 0.0992} \\[10pt]
+                        &= 0.21 
+    \end{align*}
+
+    \item Using Bayes formula: \\
+    \begin{align*}
+        P(\neg cancer\mid+ve)   &=  \frac{P(+ve | \neg  cancer) \ast P(\neg cancer)}{P(+ve)} \\[10pt]
+                                &= \frac{P(+ve | \neg  cancer) \ast P(\neg cancer)}{P(+ve | \neg cancer) \ast P(\neg cancer)+P(+ve | cancer) \ast P(cancer)} \\[10pt]
+                                &= \frac{0.03 * 0.992}{0.98 * 0.008 + 0.992*0.03} \\[10pt]
+                                &= 0.79
+    \end{align*}
+
+    \item From the given data, we can see that every 8 out of 1000 people has cancer. It is also clear that the number of false positive and false negative cases in cancer detection is very low. From (a) it is clear that the probability of having cancer in a positive test result is 21\%. From (b) it is clear that the probability of not having cancer in a positive test result is 79\%. \\
+\end{enumerate} 
