@@ -1,0 +1,27 @@
+%Roll Number 25 Devi Gopinath
+\textbf{\textcolor{LightMagenta}{What are the benefits of pruning in decision tree induction? Explain different
+approaches to tree pruning. (Sept 2020(S)) .\hfill 5 marks}} \\[5pt]
+Lack of data points makes it difficult to predict correctly the class of labels of that region.The main approach to avoid overfitting is pruning.
+Pruning is a technique that reduces the size of decision trees by removing
+sections of the tree that provide little power to classify instances. Pruning
+reduces the complexity of the final classifier, and hence improves predictive
+accuracy by the reduction of overfitting.Decision trees can suffer from repetition and replication, making them overwhelming to interpret.
+
+Repetition occurs when an attribute is repeatedly tested along a given branch of the tree
+
+In replication, duplicate subtrees exist within the tree.
+
+These situations can impede the accuracy and comprehensibility of a decision tree.\\
+\textcolor{purple}{\underline{\smash{Pruned trees}}:}
+\begin{enumerate}
+    \item These tend to be smaller and less complex and, thus, easier to comprehend. 
+    \item They are usually faster and better at correctly classifying independent test data than unpruned trees.
+    \item Pruned trees tend to be more compact than their unpruned counterparts.
+\end{enumerate}
+There are two approaches:
+\begin{enumerate}
+    \item \textcolor{purple}{\underline{Pre-pruning}}\\
+        In the pre-pruning approach, a tree is “pruned” by halting its construction early (e.g. by deciding not to further split or partition the subset of training tuples at a given node).
+    \item \textcolor{purple}{\underline{Post-pruning}}\\
+        In post-pruning approach,a subtree at a given node is pruned by removing its branches and replacing it with a leaf. 
+\end{enumerate}

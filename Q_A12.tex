@@ -1,0 +1,26 @@
+%Roll no 35 Jeevan George JOhn
+\textbf{\textcolor{LightMagenta}{Describe the significance of Kernal functions in SVM. List any two kernel functions. (Sept 2020) \hfill 4 marks}} \\[5pt]
+Kernel Function is a method used to take data as input and transform into the
+required form of processing data.Kernel Function generally transforms the training set of
+data so that a non-linear decision surface is able to transformed to a linear equation in a
+higher number of dimension spaces. Basically, It returns the inner product between two
+points in a standard feature dimension.
+SVM algorithms use a set of mathematical functions that are defined as the kernel. The
+function of kernel is to take data as input and transform it into the required form. Different
+SVM algorithms use different types of kernel functions. These functions can be different
+types. For example linear, nonlinear, polynomial, radial basis function (RBF), and sigmoid.
+Introduce Kernel functions for sequence data, graphs, text, images, as well as vectors. The
+most used type of kernel function is RBF. Because it has localized and finite response along
+the entire x-axis.The kernel functions return the inner product between two points in a suit-
+able feature space. Thus by defining a notion of similarity, with little computational cost
+even in very high-dimensional spaces.\\
+\textcolor{purple}{\underline{\smash{Gaussian Kernel}}:} It is used to perform transformation, when there is no prior knowledge about data. \\
+\textit{from sklearn.svm import SVC \\
+classifier = SVC(kernel=’rbf ’, random state = 0)\\
+training set in x, y axis \\
+classifier.fit(x train, y train) \\}
+
+\textcolor{purple}{\underline{\smash{Polynomial Kernel}}:} It represents the similarity of vectors in training set of data in a feature space over polynomials of the original variables used in kernel.\\
+\textit{from sklearn.svm import SVC \\
+classifier = SVC(kernel =’poly’, degree = 4) \\
+classifier.fit(x train, y train) \\}

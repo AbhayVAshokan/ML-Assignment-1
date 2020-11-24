@@ -1,0 +1,145 @@
+%Roll number 24 Dayana E
+\textbf{\textcolor{LightMagenta}{The following data set contains factors that determine whether tennis is played 
+or not. Using Naive Bayes classifier, find the play prediction for the day
+$<$Sunny, Cool, High, Strong$>$ (May 2019) \hfill 9 marks \\[5pt]
+\renewcommand{\arraystretch}{1.9}
+    \begin{tabular}{|l|c|r|s|t|u|}
+	\hline
+    {\bfseries Day}	& {\bfseries Outlook} & {\bfseries Temperature} & {\bfseries Humidity} & {\bfseries Wind} & {\bfseries Play}\\
+    \hline
+    Day 1 & Sunny & Hot & High & Weak & NO\\
+    \hline
+    Day 2 & Sunny & Hot & High &  Strong & NO\\
+    \hline
+    Day 3 & Overcast & Hot & High & Weak & YES\\
+    \hline
+    Day 4 & Rain & Mild & High & Weak & YES\\
+    \hline
+    Day 5 & Rain & Cool & Normal & Weak & YES\\
+    \hline
+    Day 6 & Rain & Cool & Normal & Strong & NO\\
+    \hline
+    Day 7 & Overcast & Cool & Normal & Strong & YES\\
+    \hline
+    Day 8 & Sunny & Mild & High & Weak & NO\\
+    \hline
+    Day 9 & Sunny & Cool & Normal & Weak & YES\\
+    \hline
+    Day 10 & Rain & Mild & Normal & Weak & YES\\
+    \hline
+    Day 11 & Sunny & Mild & Normal & Strong & YES\\
+    \hline
+    Day 12 & Overcast & Mild & High & Strong & YES\\
+    \hline
+    Day 13 & Overcast & Hot & Normal & Weak & YES\\
+    \hline
+    Day 14 & Rain & Mild & High & Strong & NO\\
+	\hline
+\end{tabular}
+}}
+\\ \\ Given a Hypothesis \((C)\) and evidence \((X)\), Bayes' Theorem states that the relationship between the probability of the hypothesis before getting the evidence, \(P(C)\), and the probability of the hypothesis after getting the evidence, \(P(C|X)\),  is :
+
+\[P(C|X) = \frac{P(X|C)P(C)}{P(X)} \] \\
+    For this reason,  \(P(H)\) is called the prior probability, while  \(P(H|E)\) is called the posterior probability. The factor that relates the two,  \(P(H|E)/P(E)\), is called the likelihood ratio. \\ \\ Using these terms, Bayes' theorem can be rephrased as: \\
+
+"The posterior probability equals the prior probability times the likelihood ratio."\\ \\
+ie,
+\[Posterior = \frac{Likelihood \times Prior}{Evidence} \] \\ \\
+Here we have our data, which comprises 4 attributes: the day, outlook, humidity, and wind conditions. The final column is 'Play,' i.e., can we play outside, which we have to predict.\\ \\
+
+ Now, we will create “look-up tables” for each of these attributes, and write in the probability that a game of tennis will be played based on this attribute. \\ \\In these tables we have to note that there are 5 cases of not being able to play a game, and 9 cases of being able to play a game.\\
+ 
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{|l|c|r|s|}
+	\hline
+    {\bfseries Outlook}	& {\bfseries Play = Yes} & {\bfseries Play = No} & {\bfseries Total}\\
+    \hline
+    Sunny & 2/9	& 3/5 & 5/14 \\
+    \hline
+    Overcast & 4/9 & 0/5 & 4/14 \\
+    \hline
+    Rain & 3/9 & 2/5 & 5/14 \\
+    \hline
+\end{tabular}
+\newline
+\vspace{}
+\newline
+
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{|l|c|r|s|}
+	\hline
+    {\bfseries Temperature}	& {\bfseries Play = Yes} & {\bfseries Play = No} & {\bfseries Total}\\
+    \hline
+    Hot & 2/9	& 2/5 & 4/14 \\
+    \hline
+    Mild & 4/9 & 2/5 & 6/14 \\
+    \hline
+    Cool & 3/9 & 1/5 & 4/14 \\
+    \hline
+\end{tabular}
+\newline
+\vspace{}
+\newline
+
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{|l|c|r|s|}
+	\hline
+    {\bfseries Humidity}	& {\bfseries Play = Yes} & {\bfseries Play = No} & {\bfseries Total}\\
+    \hline
+    High & 3/9	& 4/5 & 7/14 \\
+    \hline
+    Normal & 6/9 & 1/5 & 7/14 \\
+    \hline
+\end{tabular}   
+\newline
+\vspace{}
+\newline
+
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{|l|c|r|s|}
+	\hline
+    {\bfseries Wind}	& {\bfseries Play = Yes} & {\bfseries Play = No} & {\bfseries Total}\\
+    \hline
+    Strong & 3/9 & 3/5 & 6/14 \\
+    \hline
+    Weak & 6/9 & 2/5 & 8/14 \\
+    \hline
+\end{tabular}
+\addvbuffer
+\\ \\ \\We also must note the following probabilities for \(P(C)\):
+
+\[P(Play=Yes) = 9/14\]
+\[P(Play=No) = 5/14\]
+\textcolor{purple}{\underline{\bfseries Testing}}\\ \\
+Now, we are in the testing phase. For this, say we were given a new instance, and we want to know if we can play a game or not, then we need to lookup the results from the tables above. So, this new instance is:
+
+\[X = (Outlook=Sunny, Temperature=Cool, Humidity=High, Wind=Strong)\]
+Firstly we look at the probability that we can play the game, so we use the lookup tables to get:\\
+\\P(Outlook=Sunny $|$ Play=Yes) = 2/9 \\
+P(Temperature=Cool $|$ Play=Yes) = 3/9\\
+P(Humidity=High $|$ Play=Yes) = 3/9\\
+P(Wind=Strong $|$ Play=Yes) = 3/9\\
+P(Play=Yes) = 9/14 \\
+
+Next we consider the fact that we cannot play a game:\\
+\\P(Outlook=Sunny $|$ Play=No) = 3/5\\
+P(Temperature=Cool $|$ Play=No) = 1/5\\
+P(Humidity=High $|$ Play=No) = 4/5\\
+P(Wind=Strong $|$ Play=No) = 3/5\\
+P(Play=No) = 5/14\\
+\\Then, using those results, you have to multiple the whole lot together. So you multiple all the probabilities for Play=Yes such as:
+\[P(X|Play=Yes)P(Play=Yes) = (2/9) * (3/9) * (3/9) * (3/9) * (9/14) = 0.0053\]
+And this gives us a value that represents \(P(X|C)P(C)\), or in this case \(P(X|Play=Yes)P(Play=Yes)\).\\
+We also have to do the same thing for \(Play=No\):
+\[P(X|Play=No)P(Play=No) = (3/5) * (1/5) * (4/5) * (3/5) * (5/14) = 0.0206\]
+Finally, we have to divide both results by the evidence, or \(P(X)\). The evidence for both equations is the same, and we can find the values we need within the ‘Total’ columns of the look-up tables. \\Therefore:
+\[P(X) = P(Outlook=Sunny) * P(Temperature=Cool) * P(Humidity=High) * P(Wind=Strong)\]
+\[P(X) = (5/14) * (4/14) * (7/14) * (6/14)\]
+\[P(X) = 0.02186\]
+Then, dividing the results by this value:
+\[P(Play=Yes | X) = 0.0053/0.02186 = 0.2424\]
+\[P(Play=No | X) = 0.0206/0.02186 = 0.9421\]
+So, given the probabilities, can we play a game or not? \\To do this, we look at both probabilities and see which once has the highest value, and that is our answer.\\ Therefore:\\
+\[P(Play=Yes | X) = 0.2424\]
+\[P(Play=No | X) = 0.9421\]
+Since 0.9421 is greater than 0.2424 then the answer is ‘no’, we cannot play a game of tennis today.

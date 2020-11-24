@@ -1,22 +1,20 @@
-\section*{11)Question (September 2020 - Q15b) }
-    \subsection*{\large Arjun K}
-    \subsection*{Roll no : 17}
-Consider the training data in the following table where Play is a class attribute. In the table, the Humidity attribute has values “L” (for low) or “H” (for high), Sunny has values “Y” (for yes) or “N” (for no), Wind has values “S” (for strong) or “W” (for weak), and Play has values “Yes” or “No”.
+% Roll Number 17, Arjun K
+
+\textbf{\textcolor{LightMagenta}{Consider the training data in the following table where Play is a class attribute. In the table, the Humidity attribute has values “L” (for low) or “H” (for high), Sunny has values “Y” (for yes) or “N” (for no), Wind has values “S” (for strong) or “W” (for weak), and Play has values “Yes” or “No”.
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{images/A11_img1.png}
+    \includegraphics[width=10cm]{Images/A11_img1.png}
 \end{figure}\\
 What is class label for the following day (Humidity=L, Sunny=N,
-Wind=W), according to naive Bayesian classification?\\
+Wind=W), according to naive Bayesian classification? (September 2020 - Q15b) \hfill 4 marks}} \\[5pt]
 
-\section*{Answer}
 We have given a table of instances and the corresponding target values for play class attribute.\\
 We have to classify new instance {Humidity=L, Sunny=N, Wind=W} and find the target value, whether its YES or NO.\\
 P(play = yes)= 3/5 = 0.6\\
 P(play = no) = 2/5 = 0.4\\
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{images/A11_img2.png}
+    \includegraphics[width=10cm]{Images/A11_img2.png}
 \end{figure}\\
 So for calculating the probability for the given instances,\\
 \textbf{P(v)P(humidity=low/v)P(sunny=no/v)P(wind=weak/v)}, where v $\epsilon$ {yes/no}.\\
@@ -39,7 +37,3 @@ P(play=yes) = 0.054/(0.054+0.05) = 0.52\\
 P(play=no) = 0.05/(0.054+0.05) = 0.48\\
 Since P(play=yes)+P(play=no) = 0.52+0.48 = 1\\
 We can assume that according to naive Bayesian classification class label for the following day with attributes(Humidity = L, Sunny = N, Wind = W) is yes.\\
-
-\subsection*{References}
-
-   [1] https://web.cs.hacettepe.edu.tr/~ilyas/Courses/BIL712/lec04-BayesianLearning.pdf \\ 

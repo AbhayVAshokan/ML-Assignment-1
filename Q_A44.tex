@@ -1,22 +1,21 @@
-% Roll Number 56, Shashank Menon
+% Roll Number 56, Shruthin Vasanth
 
-\textbf{\textcolor{LightMagenta}{Differentiate between supervised and unsupervised training. Explain with suitable examples. (May 2019, Q11 b)\hfill (Mark 5)}} \\[5pt]
-\textbf{\textcolor{purple}{Supervised Training:} }
+\textbf{\textcolor{LightMagenta}{Is regression a supervised learning technique? Justify your answer. Compare regression with classification with examples.\\ (Dec 2019, Q11 a)\hfill (Marks 5)}} \\[5pt]
+\\
+\textbf{\textcolor{purple}{Part 1:} }
 
-    Supervised training is a machine learning technique in which we have prior knowledge of what the output values for our training data set should be. \\
-    This means that we have a full set of labelled data while training.
-    Fully labeled means that each example in the training data set is tagged with the answer the algorithm should come up with on its own. So, a labeled data set of fruit images would tell the model which photos were of apples, bananas, oranges and so on. When the model encounters a new image, it compares it to the training examples to predict the correct label.
+   Linear Regression is Supervised because the data you have include both the input and the output. So, for instance, if you have a dataset for, say, car sales at a dealership. You have, for each car, the make, model, price, color, discount etc. but you also have the number of sales for each car. If this task was unsupervised, you would have a dataset that included, maybe, just the make, model, price, color etc. (not the actual number of sales) and the best you could do is cluster the data. Linear regression requires a quality check of the predicted output by comparing it with the actual desired output.
+
     
-    Therefore the goal of supervised training is to train a machine learning model which given a sample of data and desired outputs, best approximates the relationship between input and output observed in the data.
-    
-    \textit{For Example:} for a supervised classification model that is used to predict a fruits name given an image, first we train the model on a data set of fruit images with names, then we test it on images containing fruits and check the accuracy of the trained model.
+
     \newline \\
-\textbf{\textcolor{purple}{Unsupervised Training:} }
+\textbf{\textcolor{purple}{Part 2:} }
     
-    Unsupervised training, on the other hand, does not have labeled outputs, so its goal is to infer the natural structure present within a set of data points.\\
-    The machine learning model is given a data set without explicit instructions on what to do with it. The training data set is a collection of examples without a specific desired output or correct answer. The model then attempts to automatically find structure in the data by extracting useful features and analyzing its structure.
-    But since no labels are provided, there is no specific way to compare model performance in most unsupervised training methods.
-    
-    \textit{For Example:} for an unsupervised clustering model that separates the pictures of dogs according to their species according to the differences in fur colour, height, etc. We can use a trained unsupervised model to roughly group unlabeled images into similar or dissimilar groups.
+   \textbf{\textcolor{ReddishRose}{Regression} } is the process of finding a model or function for distinguishing the data into continuous real values instead of using classes or discrete values. It can also identify the distribution movement depending on the historical data. Because a regression predictive model predicts a quantity, therefore, the skill of the model must be reported as an error in those predictions.
 
+    
+    \textit{For Example:}  Predicting the amount of rainfall that we’ll get on a particular day based on historical data.
+    
+    \textbf{\textcolor{ReddishRose}{Classification}} is the process of finding or discovering a model or function which helps in separating the data into multiple categorical classes i.e. discrete values. In classification, data is categorized under different labels according to some parameters given in input and then the labels are predicted for the data. The derived mapping function could be demonstrated in the form of “IF-THEN” rules. The classification process deals with the problems where the data can be divided into binary or multiple discrete labels. \newline \\
+ \textit{For Example:} Classifying whether a given image is a fruit or a vegetable.
 

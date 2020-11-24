@@ -1,31 +1,38 @@
-% Roll Number 28, Fathima Sherin N
+% Roll Number 10, Alina Annie furtado
+.
+\textbf{\textcolor{LightMagenta}{Explain how SVM can be used for classification of linearly separable data. (May 2019, Qn 17(a)) \hfill (Mark 6)}} \\[5pt]
+SVM, also known as Support vector machines can be used for both classification and
+regression problems. But it is mostly used in classification problems. The objective of
+the support vector machine algorithm is to find a hyperplane in an N-dimensional space
+that distinctly classifies the data points. Consider the data points given below,
+ \begin{figure}[htp]
+    \centering
+    \includegraphics[width=5cm]{Images/A37_img1.png}
+ \end{figure}
+As you can see in the figure, the two data points can be separated in n number of ways
+by using a straight line. But our aim is to find out an optimal hyperplane that efficiently
+classifies the two data points. 
+The main terminologies associated with  SVM are:\\
+% \begin{enumerate}
+%     \item Optimal Hyperplane
+%     \item Marginal Planes
+%     \item Marginal Distance
+%     \item Support vectors
+% \end{enumerate}
+a) Optimal Hyperplane\\
+b) Marginal Planes\\
+c) Marginal Distance\\
+d) Support vectors\\
 
-\textbf{\textcolor{LightMagenta}{Discuss the issues involved in decision tree learning.(May 2019, Qn 16 (b))\hfill (Mark 5)}} \\[5pt]
-\begin{enumerate}
-\item Overfitting the data: 
- In decision-tree algorithms, it grows each branch of the tree just deeply enough to perfectly classify the training examples but it can lead to difficulties when there is noise in the data, or when the number of training examples is too small to produce a representative sample of the true target function. 
-     \item Handling continuous valued attributes:
-      There are following restrictions to attributes for decision tree:
-   - The target attribute whose value is predicted by the learned tree must be discrete            valued.
-   - The attributes tested in the decision nodes of the tree must also be discrete valued.
-   
-    \item Attributes with many values:
-    There is a natural bias in the information gain measure that favors attributes with many values over those with few values.
-For example, In case of attribute date,it has so many possible values that it is bound to separate the training examples into very small subsets. Because of this, it will have a very high information gain relative to the training examples.
-    \item Handling missing attribute values:
-    In certain cases, the available data may be missing values for some attributes. For example, in a medical domain in which we wish to predict the patient outcome based on various laboratory tests, it may be that the Blood-Test-Result is available only for a subset of the patients.
-    \item Handling attributes with differing costs:
-    In some learning tasks, the instance attributes may have associated costs. For example, in learning to classify medical diseases we might describe patients in terms of attributes such as Temperature, Pulse, etc. These attributes vary significantly in their costs, both in terms of monetary cost and cost to patient comfort.
-\end{enumerate}
-
-
+Once the hyperplane is obtained, we obtain two planes that are parallel to the hyperplane and which pass through the data points which is nearest to the hyperplane.
+ \begin{figure}[htp]
+    \centering
+    \includegraphics[width=5cm]{Images/A37_img2.png}
+ \end{figure}
+ Here in the second figure, we can see two parallel planes(Marginal planes) which pass connecting the data points which are nearest to the hyperplane. The distance between the two marginal planes is calculated by \(\frac{2}{{\vert}w{\vert}} \)
+(where w is a unit vector) and is called Marginal distance.
+ 
+ %{\lvert}2/w{\lvert} (where w is a unit vector) and is called Marginal distance.
  
 
-
-
- 
- 
-
-
- 
-        
+ Support vectors are nothing but the nearest data points to the hyperplane. It can also be defined as the points which pass through the marginal plane. Our aim is to always obtain a generalised model. Therefore we must select the optimal hyperplane as the plane which is having the maximum marginal distance. The greater the marginal distance more will be the efficiency in classifying data points into the corresponding classes. This is how SVM can be used for the classification of linearly separable data.

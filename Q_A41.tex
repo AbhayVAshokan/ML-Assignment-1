@@ -1,16 +1,15 @@
-% Roll Number 61, Swathy M
-
-\textbf{\textcolor{LightMagenta}{With suitable equations, explain any two types of activation functions used in neural networks. (May 2019, Qn 6)\hfill (Mark 6)}} \\[5pt]
-ReLu:-
-The Rectified Linear Unit (ReLU) function is one of the most popular Activation Functions in Deep Learning models. It is a fast-learning AF that promises to deliver state-of-the-art performance. Compared to other Activation Functions like the sigmoid and tanh functions, the ReLU function offers much better performance and generalization in deep learning. The function is a nearly linear function that retains the properties of linear models, which makes them easy to optimize with gradient-descent methods. The ReLU function performs a threshold operation on each input element where all values less than zero are set to zero. Thus, the ReLU is represented as:
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Images/A41_img1.png}
- \end{figure}
-
-Softmax: - 
-The softmax function is a type of Activation Function used in neural networks to compute probability distribution from a vector of real numbers. This function generates an output that ranges between values 0 and 1 and with the sum of the probabilities being equal to 1. The softmax function is represented as follows:
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Images/A41_img2.png}
- \end{figure}
+% Roll Number 60, Sreeraj Rajan
+\textbf{\textcolor{LightMagenta}{What is the significance of optimal separating hyperplanes in SVM?  (May 2019, Q7)\hfill (Mark 4)}} \\[5pt]
+In a binary classification problem, given a linearly separable data set, the optimal
+separating hyperplane is the one that correctly classifies all the data while being
+farthest away from the data points. In this respect, it is said to be the hyperplane
+that maximizes the margin, defined as the distance from the hyperplane to the
+closest data point.
+The optimal separating hyperplane should not be confused with the optimal 
+classifier is known as the Bayes classifier: the Bayes classifier is the best classifier 
+for a given problem, independently of the available data but unattainable in
+practice, whereas the optimal separating hyperplane is only the best linear
+classifier one can produce given a particular data set.
+The optimal separating hyperplane is one of the core ideas behind the support
+vector machines. In particular, it gives rise to the so-called support vectors which are the data points lying on the margin boundary of the hyperplane. These points support the hyperplane in the sense that they contain all the required information to compute the hyperplane: removing other points does not change the optimal separating hyperplane. Elaborating on this fact, one can actually add points to the data set without influencing the hyperplane, as long as these points lie
+outside of the margin.
