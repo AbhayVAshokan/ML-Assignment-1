@@ -1,0 +1,40 @@
+% Roll Number 09, Akshay Ravindran
+
+\textbf{\textcolor{LightMagenta}{Explain basic problems associated with hidden markov model. (December 2018, Q 17 a))\hfill (Mark 6)}} \\[5pt]
+\text{The Hidden Markov model is associated with three basic problems -} \\ {evaluation, decoding, and learning to find the most likelihood classification. Evaluation problem can be used for isolated(word) recognition. Decoding problem is related to the continuous recognition as well as to the segmentation. Learning problem must be solved if we want to train an HMM for the subsequent use of recognition tasks.
+} \\
+
+\textbf{\textcolor{purple}{The Evaluation problem:} }
+
+By evaluation, we mean the probability that a particular sequence of symbols is produced by a particular model. Our first problem is to compute the likelihood of a particular observation sequence or in other words which model gives the highest likelihood to the data.
+
+Computing Likelihood: Given an HMM $\lambda$= (A, B) and an observation sequence O, determine the likelihood P(O$|\lambda$). 
+
+For an HMM with N hidden states and an observation sequence of T observations, there are N$^T$ possible hidden sequences. For real tasks, where N and T are both large, N$^T$ is a very large number, and so one can not compute the total observation likelihood by computing a separate observation likelihood for each hidden state sequence and then summing them up. 
+Instead of using such an extremely exponential algorithm, we use an efficient algorithm called the forward algorithm. The forward algorithm computes the observation probability by summing over the probabilities of all possible hidden-state paths that could generate the observation sequence. \\
+
+\textbf{\textcolor{purple}{The Decoding problem:} } 
+    
+Decoding means determining the most likely sequence of states that produced the sequence. Thus given an observation sequence O and an HMM  $\lambda$= (A, B), discover the best-hidden state sequence Q. For this problem, we use the Viterbi algorithm.
+
+In formal words, given as input an HMM  $\lambda$= (A,B) and a sequence of observations O = o1,o2, ...,oT, find the most probable sequence of states Q = q1q2q3 . . .qT . 
+
+We can run the forward algorithm and compute the likelihood of the observation sequence for the given hidden state sequence. Then choose the hidden state sequence with the max observation likelihood. But this can not be done since there is an exponentially large number of state sequences. Instead, the most common decoding algorithm for HMMs is the Viterbi algorithm.
+
+Viterbi algorithm is identical to the forward algorithm exceptions. It takes the max over the previous path probabilities whereas the forward algorithm takes the sum. It contains a backpointers component that the forward algorithm lacks. This is because while the forward algorithm needs to produce observation likelihood, the Viterbi algorithm must produce a probability and also the most likely state sequence. This best state sequence is computed by keeping track of the path of hidden states that led to each state. \\
+
+\textbf{\textcolor{purple}{The Learning problem:} }
+    
+Generally, the learning problem is the adjustment of the HMM parameters, so that the given set of observations or the training set is represented by the model in the best way for the intended application.
+
+In other words, Given a model $\lambda$ and a sequence of observations O = o1,o2, ...,oT, how should we adjust the model parameters \{A, B, $\pi$\} in order to maximize P(O$|\lambda$). 
+
+The quantity' which is to be optimized during the learning process can be different from application to application. There may be several optimization criteria for learning, from which a suitable one is selected depending on the application.
+
+So in order to obtain the desired model that best fits the data, the following 3 algorithms are applied:  
+\begin{itemize}
+  \item MLE (maximum likelihood estimation) 
+  \item Viterbi training(different from Viterbi decoding)  
+  \item Baum Welch - forward-backward algorithm
+\end{itemize}
+

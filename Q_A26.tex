@@ -1,0 +1,43 @@
+% roll no 12 ANANDU T MOHAN
+
+\textbf{\textcolor{LightMagenta}{Explain the various method to perform cross validation (May 2019) \hfill 4 marks}}
+\\[5pt]
+
+Cross-validation is a statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance. 
+
+\textbf{\textcolor{purple}{Types of cross validation}}
+\begin{itemize}
+    \item LOOCV (Leave one out cross-validation)
+    \item K Fold
+    \item Stratified cross-validation
+    \item Time series cross-validation
+\end{itemize}
+
+\textbf{\textcolor{purple}{1. Leave one out cross validation — LOOCV} }
+
+In LOOCV we divide the data set into two parts. In one part we have a single observation, which is our test data and in the other part, we have all the other observations from the dataset forming our training data.
+If we have a data set with n observations then training data contains n-1 observation and test data contains 1 observation.
+This process is iterated for each data point as shown below. Repeating this process n times generates n times Mean Square Error(MSE).
+\\
+
+\textbf{\textcolor{purple}{2. K fold cross validation}}
+
+This technique involves randomly dividing the dataset into k groups or folds of approximately equal size. The first fold is kept for testing and the model is trained on k-1 folds.
+The process is repeated K times and each time different fold or a different group of data points are used for validation.
+As we repeat the process k times, we get k times Mean Square Error(MSE).So k-Fold CV error is computed by taking average of the MSE over K folds.
+\\
+
+\textbf{\textcolor{purple}{3. Stratified cross-validation}}
+
+Stratification is a technique where we rearrange the data in a way that each fold has a good representation of the whole dataset. It forces each fold to have at least m instances of each class. This approach ensures that one class of data is not overrepresented especially when the target variable is unbalanced.
+For example in a binary classification problem where we want to predict if a passenger on Titanic survived or not. we have two classes here Passenger either survived or did not survive. We ensure that each fold has a percentage of passengers that survived and a percentage of passengers that did not survive.
+\\
+
+\textbf{\textcolor{purple}{4. Time series cross-validation}}
+
+Splitting time series data randomly does not help as the time-related data will be messed up.
+If we are working on predicting stock prices and if we randomly split the data then it will not help. Hence we need a different approach for performing cross-validation.
+For time series cross-validation we use forward chaining also referred as rolling-origin. Origin at which the forecast is based rolls forward in time.
+In time series cross-validation each day is a test data and we consider the previous day’s data is the training set.
+D1, D2, D3 etc. are each day’s data and days highlighted in blue are used for training and days highlighted in yellow are used for test.
+we start training the model with a minimum number of observations and use the next day's data to test the model and we keep moving through the data set. This ensures that we consider the time series aspect of the data for prediction.

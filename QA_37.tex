@@ -1,0 +1,28 @@
+% Roll Number 18, Ashwin Kalarikkal Shekharan
+\textbf{\textcolor{LightMagenta}{Suppose 10000 patients get tested for flu; out of them, 9000 are actually healthy and 1000 are actually sick. For the sick people, a test was positive for 620 and negative for 380. For the healthy people, the same test was positive for 180 and negative for 8820. Construct a confusion matrix for the data and compute the precision and recall for the data. (Sept 2020) \hfill 4 marks}} \\[5pt]
+The basic definitions in this scenario will be like :
+\begin{itemize}
+        \item \textbf{\textcolor{purple}{True positive (TP):}} Positive test result that matches reality, i.e, the person is actually sick and tested positive.
+        \item \textbf{\textcolor{purple}{False positive (FP):}} Positive test result that  doesn't match reality, i.e, the test is positive but the person is not actually sick.
+        \item \textbf{\textcolor{purple}{True negative (TN):}} Negative test result that matches reality, i.e, the person is not sick and tested negative.
+        \item \textbf{\textcolor{purple}{False negative (FN):}} Negative test result that doesn't match reality, i.e, the test is negative but the person is actually sick.
+\end{itemize}
+\\ Using these definitions, we can form the confusion matrix:\\ \\
+\begin{tabularx}{0.8\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+ \hline
+  & \textbf{Actual sick (TRUE)} & \textbf{Actual sick (FALSE)} \\
+ \hline
+ \textbf{Predicted sick (TRUE)}  & TP= 620  & FP= 180 \\
+ \hline
+ \textbf{Predicted sick (FALSE)}  & FN= 380 & TN= 8820  \\
+\hline
+\end{tabularx} \\
+\begin{enumerate}
+    \begin{itemize}
+        \item \textbf{Precision (P)} \\= \textbf{TP/(TP+FP)} \\= 620/(620+180) \\= 620/800 \\= \textbf{0.775}
+        \item \textbf{Recall (R)} \\= \textbf{TP/(TP+FN)} \\= 620/(620+380) \\= 620/1000 \\= \textbf{0.62}
+    \end{itemize}
+\end{enumerate}

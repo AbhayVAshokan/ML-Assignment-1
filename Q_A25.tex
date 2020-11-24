@@ -1,0 +1,23 @@
+%roll no 34 IMTHIYAS V
+
+\textbf{\textcolor{LightMagenta}{Compare cross validation with bootstrapping techniques  (Sept 2020) \\ . \hfill 4 marks}}
+\\[5pt]
+
+Both cross validation and bootstrapping are resampling methods.
+
+\textbf{\textcolor{purple}{Cross validation}}
+
+Cross validation resamples without replacement and thus produces surrogate data sets that are smaller than the original.
+
+To test the performance of a classifier, we need to have a number of training/validation set pairs from a dataset X. Cross- validation is a technique to evaluate predictive models by partitioning the original sample into a training set to train the model, and a test set to evaluate it. The holdout method is the simplest kind of cross validation. The data set is separated into two sets, called the training set and the testing set. The algorithm
+fits a function using the training set only.
+Then the function is used to predict the output values for the data in the testing set (it has never seen these output values before). The errors it makes are used to evaluate the
+model. This method is mainly used when the data set D is large.
+
+Cross validation is a procedure for validating a model's performance, and it is done by splitting the training data into k parts. We assume that the k-1 parts is the training set and use the other part is our test set. We can repeat that k times differently holding out a different part of the data every time. Finally, we take the average of the k scores as our performance estimation. Cross validation can suffer from bias or variance. Increasing the number of splits, the variance will increase too and the bias will decrease. On the other hand, if we decrease the number of splits, the bias will increase and the variance will decrease.
+
+
+\textbf{\textcolor{purple}{Bootstrapping in machine learning}}
+
+The term bootstrap sampling refers to the process of “random sampling with replacement”. 
+In Machine Learning, bootstrapping is the process of computing performance measures using several randomly selected training and test datasets which are selected through a process of sampling with replacement, that is, through bootstrapping. Sample datasets are selected multiple times. The bootstrap procedure will create one or more new training datasets some of which are repeated. The corresponding test datasets are then constructed from the set of examples that were not selected for the respective training datasets.

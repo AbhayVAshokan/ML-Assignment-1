@@ -1,0 +1,64 @@
+% roll no 64 JINI AA
+
+\textbf{\textcolor{LightMagenta}{Illustrate the two approaches used in subset selection. (May 2019) \hfill 6 marks}}
+\\[5pt]
+
+	There are two approaches to Subset Selection \\
+	
+    \hspace*{10pt}i.	Forward Selection \\
+    \hspace*{10pt}ii.	Backward selection \\
+    \\ Let us denote by F, a feature set of input dimensions, xi, i = 1,...,d.
+E(F) denotes the error incurred on the validation sample when only the inputs in F are used. Depending on the application, the error is either the mean square error or misclassification error.
+\\
+
+\textbf {\textcolor{purple}{FORWARD SELECTION}}: we start with no input variables and add them one by one, at each step adding the one that decreases the error the most, until any further addition does not decrease the error (or decreases it only slightly)
+Checking of the error is done on a validation set distinct from the training set because we want to test the generalization accuracy. With more features, generally we have lower training error, but not necessarily lower validation error. \\
+In sequential forward selection, the steps are
+\\ \hspace*{10pt}i.	We start with no features: F = ∅.
+\\ \hspace*{10pt}ii.	At each step, for all possible xi, we train our model on the training set and calculate
+E(F ∪ xi ) on the validation set.\\
+ \hspace*{10pt}iii.	Then, we choose that input xj that causes the least error
+j =argminE(F ∪xi) i
+and we add xj to F if E(F∪xj) $<$ E(F)\\
+ \hspace*{10pt}iv.	We stop when\\
+ ●	if adding any feature does not decrease E.\\
+●	We may even decide to stop earlier if the decrease in error is too small, where there is a user-defined threshold that depends on the application constraints.
+Adding a new feature introduces the cost of observing the feature, as well as making the classifier/regressor more complex.
+
+
+\textbf {\textcolor{ReddishRose}{Complexity analysis of forward search}}
+
+This process may be costly because to decrease the dimensions from d to k, we need to train and test the system d+(d−1)+(d−2)+···+(d−k) times, which is O(d2).
+\\
+
+\textbf {\textcolor{ReddishRose}{Disadvantage with Forward Selection} }- Forward selection is a local search procedure and does not guarantee finding the optimal subset, namely, the minimal subset causing the smallest error. For example, xi and xj by themselves may not be good but together may decrease the error a lot, but because this algorithm is greedy and adds attributes one by one, it may not be able to detect this. It is possible to generalize and add multiple features at a time, instead of a single one, at the expense of more computation.
+\\
+
+\textbf {\textcolor{ReddishRose}{Solution}} - 
+
+We can backtrack and check which previously added feature can be removed after a current addition, thereby increasing the search space, but this increases complexity.
+\\
+
+\textbf {\textcolor{ReddishRose}{floating search methods}} -
+
+in which the number of added features and removed features can also change at each step.
+\\
+
+
+\textbf {\textcolor{purple}{BACKWARD SELECTION}} - we start with all variables and remove them one by one, at each step removing the one that decreases the error the most (or increases it only slightly), until any further removal increases the error significantly.
+\\ 
+\\
+ In sequential backward selection, steps are \\
+ \hspace*{10pt}i.	we start with F containing all features \\
+ \hspace*{10pt}ii.	At each step, for all possible xi, we train our model on the training set by removing one attribute at a time and calculate E(F - xi ) on the validation set and, and we remove the one that causes the least error\\
+\hspace*{10pt}iii.	Then, we choose that input xj that causes the least error
+j =argmin E(F −xi) i
+and we remove xj from F if E(F−xj) < E(F)\\
+ \hspace*{10pt}iv.	We stop
+●	if removing a feature does not decrease the error. To decrease complexity, we may decide to remove a feature if its removal causes only a slight increase in error.
+All the variants possible for forward search are also possible for backward search.
+
+\textbf {The complexity of backward search has the same order of complexity as forward search, except that training a system with more features is more costly than training a system with fewer features, and forward search may be preferable especially if we expect many useless features.
+Subset selection is supervised method because outputs are used by the regressor or classifier to calculate the error}
+
+In an application like face recognition, feature selection is not a good method for dimensionality reduction because individual pixels by themselves do not carry much discriminative information; it is the combination of values of several pixels together that carry information about the face identity. This is done by feature extraction method like Principal Component Analysis.
