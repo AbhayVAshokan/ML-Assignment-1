@@ -1,12 +1,6 @@
 # ML Assignment 1
 > Solutions to previous KTU question papers.
 
-### Team Members
-1. Abhay V Ashokan
-2. Ajay Ravindran
-3. Annarose M B
-4. Kiranniya Madhu
-5. Krishna K
-6. Rashad K
+Question reservation (Accessible only for gectcr domain email ids): <a href="https://docs.google.com/spreadsheets/d/1fvNAu9Z95jfHJzGA_s-V42OA74gzFSxRHU2Ljcd_IOg/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1fvNAu9Z95jfHJzGA_s-V42OA74gzFSxRHU2Ljcd_IOg/edit?usp=sharing</a>
 
-Overleaf link (view only): <a href="https://www.overleaf.com/read/wbjmcytkbcnf">https://www.overleaf.com/read/wbjmcytkbcnf</a>
+Overleaf Link (editable): <a href="https://www.overleaf.com/3774137746vvtqznqbfqqj">https://www.overleaf.com/3774137746vvtqznqbfqqj</a>
