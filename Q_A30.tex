@@ -1,0 +1,12 @@
+% roll no 44 - Mohammed Hasiq
+\textbf{\textcolor{LightMagenta}{ Explain the basic elements of a Hidden Markov Model (HMM).Listany two applications of HMM. (Sep 2020) \hfill 4 marks}} \\[5pt]
+{ An HMM can be completely described by the following elements:-
+\newline(a) N is the number of the hidden states in the model. Individual states are denoted as S = {S1, S2, . . . , SN }, and the state at time t as qt.\newline
+(b) M is the number of distinct observation symbols for each state and is called the alphabet size and correspond to the physical output of the system which is modelled.\newline
+(c) The state transition probability distribution A = {aij}, where aij = P[qt = Sj |qt−1 = Si], 1 ≤ i, j ≤ N ,  aij ≥ 0 \newline
+(d) The observation symbol probability distribution in state j, B = {bj (k)},where bj (k) = P[vk at t|qt = Sj ], 1 ≤ j ≤ N and 1 ≤ k ≤ M \newline
+(e) The initial state distribution, describing the probability of beginning the state sequence in a certain initial state.
+πi = P[q1 = Si], 1 ≤ i ≤ N \newline
+(f) The observation sequence is denoted as O = O1O2 · · · OT .
+λ represents the complete parameter set of a model, where λ = (A, B, π).\newline
+HMM can be applied in Cryptanalysis, Speech Recognition, etc...}

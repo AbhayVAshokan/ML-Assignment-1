@@ -1,0 +1,32 @@
+% Roll no 21, Chanchal Delson
+\textbf{\textcolor{LightMagenta}{ What is meant by k-fold cross validation. Given a data set with 1200 instances, How k- fold cross validation is done with k=1200.? (Dec 2018) \hfill 4 marks}} \\[5pt]
+
+(a) In K-fold cross-validation, the dataset X is divided randomly into K equal- sized parts,
+Xi
+, i = 1,...,K. To generate each pair, we keep one of the K parts out as the validation set
+and combine the remaining K - 1 parts to form the training set. Doing this K times,
+each time leaving out another one of the K parts out, hence by we get K pairs each
+\\ \\
+(b) When K = 1200 \\
+\begin{math}
+\hspace*{10mm} 
+  V_1 = X_1  \hspace*{5mm}      T_1= X_2 \hspace*{1 mm} U \hspace*{1 mm}  X_3 \hspace*{1 mm} U \hspace*{1 mm} X_4 ......... \hspace*{1 mm} U \hspace*{1 mm} X_1_2_0_0 \\
+\hspace*{10mm}
+  V_2 = X_2  \hspace*{5mm}   T_1= X_1 \hspace*{1 mm} U \hspace*{1 mm}  X_3 \hspace*{1 mm} U \hspace*{1 mm} X_4 ......... \hspace*{1 mm} U \hspace*{1 mm} X_1_2_0_0 \\
+\hspace*{10mm}
+  V_3 = X_3 \hspace*{5mm}   T_1= X_1 \hspace*{1 mm} U \hspace*{1 mm}  X_2 \hspace*{1 mm} U \hspace*{1 mm} X_4 ......... \hspace*{1 mm} U \hspace*{1 mm} X_1_2_0_0 \\
+\hspace*{10mm}          
+  .............................................................. \\
+\hspace*{10mm}  
+  .............................................................. \\
+\hspace*{10mm}  
+  .............................................................. \\
+\hspace*{10mm}  
+  .............................................................. \\
+\hspace*{10mm}            
+  V_1_2_0_0 = X_1_2_0_0 \hspace*{5mm}   T_1= X_1 \hspace*{1 mm} U \hspace*{1 mm}  X_2 \hspace*{1 mm} U \hspace*{1 mm} X_3 ......... \hspace*{1 mm} U \hspace*{1 mm} X_1_1_9_9 \\ \\
+     
+     where \\ X=\{....... is \hspace*{1 mm} the\hspace*{1 mm} subset \hspace*{1 mm} \hspace*{1 mm} of \hspace*{1 mm} all \hspace*{1 mm}the \hspace*{1 mm} datasets\} \\
+     T=\{ ....... is \hspace*{1 mm} the \hspace*{1 mm} subset\hspace*{1 mm} of\hspace*{1 mm} all \hspace*{1 mm} the \hspace*{1 mm} K \hspace*{1 mm} division \hspace*{1 mm} Combination \hspace*{1 mm} of \hspace*{1 mm} the \hspace*{1 mm} dataset\} \\ 
+     V=\{....... is \hspace*{1 mm} the\hspace*{1 mm} subset \hspace*{1 mm} \hspace*{1 mm} of \hspace*{1 mm} Test \hspace*{1 mm} values \hspace*{1 mm}of \hspace*{1 mm} the \hspace*{1 mm} datasets\} \\
+  \end{math}

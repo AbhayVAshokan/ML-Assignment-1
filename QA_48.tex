@@ -1,0 +1,18 @@
+% Roll number 53, Safuan M P
+
+\textbf{\textcolor{LightMagenta}{Explain the concept of Probably Approximately correct learning(May 2019) \hfill 4 marks}} \\[5pt]
+In Probably Approximately Correct (PAC) learning, given a class, C, and examples drawn from some unknown but fixed probability distribution, p(x), we want to find the number of examples, N, such that with probability at least \\1- $\delta$, the hypothesis h has error at most $\epsilon$, for arbitrary $\delta$ $\leq$ 1/2 and $\epsilon$ $>$ 0 . In short, the goal of a PAC learner is to build a hypothesis with high probability (denoted 1- $\delta$) that would be approximately correct (ie: error rate less than $\epsilon$ ).\\
+P\{C$\Delta$h $\leq$ $\epsilon$\} $\geq$ 1- $\delta$.\\
+Where C$\Delta$h is the region of difference between C and h. We would like to make sure that the probability of a positive example falling in here (and causing an error) is at most $\epsilon$, with a confidence 1- $\delta$.\\
+ Assuming S as the tightest possible rectangle, the error region between C and h is the sum of four rectangular strips . \\
+ For any of these strips, if we can guarantee that the probability is upper bounded by $\epsilon$/4, the error is at most [4($\epsilon$/4)=$\epsilon$].\\
+We count the overlaps in the corners twice, and the total actual error in this case is less than 4($\epsilon$/4).\\
+The probability that a randomly drawn example misses this strip is 1- $\epsilon$/4. \\
+The probability that all N independent draws miss the strip is (1 - $ \epsilon$/4)N , and the probability that all N independent draws miss any of the four strips is at most 4(1 $−$ $\epsilon$/4)N , which we would like to be at most $\delta$.
+ We have the inequality (1 − x) \leq $exp[−x]$
+ 
+So if we choose N and δ such that we have 4exp[−$\epsilon$/4] ≤ $\delta$ 
+we can also write 4 (1- $\epsilon$/4)N \leq $\delta$. Dividing both sides by 4, taking (natural) log and rearranging terms, we have 
+N \geq (4/$\epsilon$) log(4/$\delta$) 
+Therefore, provided that we take at least (4/$\epsilon$)log(4/$\delta$) independent examples from C and use the tightest rectangle as our hypothesis h, with confidence probability at least 1 − $\delta$, a given point will be misclassified with error probability at most $\epsilon$. 
+We can have arbitrary large confidence by decreasing $\delta$ and arbitrary small error by decreasing ε. The number of examples is a slowly growing function of 1/$\epsilon$ and 1/$\delta$, linear and logarithmic, respectively.

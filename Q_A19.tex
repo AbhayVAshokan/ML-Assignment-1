@@ -1,0 +1,154 @@
+% Roll no 39, Karthik Krishna
+\textbf{\textcolor{LightMagenta}{Use K Means clustering to cluster the following data into two groups. Assume cluster centroids are m1=2 and m2=4. The distance function used is Euclidean distance. \{2, 4, 10, 12, 3, 20, 30, 11, 25\} (May 2019) \hfill 6 marks}} \\[5pt]
+
+n = 9  \\
+Data: \{2, 4, 10, 12, 3, 20, 30, 11, 25\} \\
+m1 = 2, m2 = 4 \\
+\begin{math} distance1 = \|xi - m1\|, \hspace{5pt} distance2 = \|xi - m2\| \end{math}\\
+
+\textcolor{purple}{\underline{Iteration 1:}} \\
+
+\begin{tabular} {|c|c|c|c|c|c|}
+    \hline
+        xi & m1 & m2 & distance1 & distance2 & Nearest cluster \\
+        \hline
+        \hline
+        2 & 2 & 4 & 0 & 2 & 1\\
+        \hline
+        3 & 2 & 4 & 1 & 1 & 1\\
+        \hline
+        4 & 2 & 4 & 2 & 0 & 2\\
+        \hline
+        10 & 2 & 4 & 8 & 6 & 2\\
+        \hline
+        11 & 2 & 4 & 9 & 7 & 2\\
+        \hline
+        12 & 2 & 4 & 10 & 8 & 2\\
+        \hline
+        20 & 2 & 4 & 18 & 16 & 2\\
+        \hline
+        25 & 2 & 4 & 23 & 21 & 2\\
+        \hline
+        30 & 2 & 4 & 28 & 26 & 2\\
+        \hline 
+    \end{tabular}
+\\ [5pt]
+m1 = 2.5, m2 = 16
+
+\textcolor{purple}{\underline{Iteration 2:}} \\
+
+\begin{tabular} {|c|c|c|c|c|c|}
+    \hline
+        xi & m1 & m2 & distance1 & distance2 & Nearest cluster \\
+        \hline
+        \hline
+        2 & 2.5 & 16 & 0.5 & 14 & 1\\
+        \hline
+        3 & 2.5 & 16 & 1.5 & 13 & 1\\
+        \hline
+        4 & 2.5 & 16 & 2.5 & 12 & 1\\
+        \hline
+        10 & 2.5 & 16 & 7.5 & 6 & 2\\
+        \hline
+        11 & 2.5 & 16 & 8.5 & 5 & 2\\
+        \hline
+        12 & 2.5 & 16 & 9.5 & 4 & 2\\
+        \hline
+        20 & 2.5 & 16 & 17.5 & 4 & 2\\
+        \hline
+        25 & 2.5 & 16 & 22.5 & 9 & 2\\
+        \hline
+        30 & 2.5 & 16 & 27.5 & 14 & 2\\
+        \hline 
+    \end{tabular}
+\\ [5pt]
+m1 = 3, m2 = 18
+
+\textcolor{purple}{\underline{Iteration 3:}} \\
+
+\begin{tabular} {|c|c|c|c|c|c|}
+    \hline
+        xi & m1 & m2 & distance1 & distance2 & Nearest cluster \\
+        \hline
+        \hline
+        2 & 3 & 18 & 1 & 16 & 1\\
+        \hline
+        3 & 3 & 18 & 0 & 15 & 1\\
+        \hline
+        4 & 3 & 18 & 1 & 14 & 1\\
+        \hline
+        10 & 3 & 18 & 7 & 8 & 2\\
+        \hline
+        11 & 3 & 18 & 8 & 7 & 2\\
+        \hline
+        12 & 3 & 18 & 9 & 6 & 2\\
+        \hline
+        20 & 3 & 18 & 17 & 2 & 2\\
+        \hline
+        25 & 3 & 18 & 22 & 7 & 2\\
+        \hline
+        30 & 3 & 18 & 27 & 12 & 2\\
+        \hline 
+    \end{tabular}
+\\ [5pt]
+m1 = 4.75, m2 = 19.6
+
+\textcolor{purple}{\underline{Iteration 4:}} \\
+
+ \begin{tabular} {|c|c|c|c|c|c|}
+    \hline
+        xi & m1 & m2 & distance1 & distance2 & Nearest cluster \\
+        \hline
+        \hline
+        2 & 4.75 & 19.6 & 2.75 & 17.6 & 1\\
+        \hline
+        3 & 4.75 & 19.6 & 1.75 & 16.6 & 1\\
+        \hline
+        4 & 4.75 & 19.6 & 0.75 & 15.6 & 1\\
+        \hline
+        10 & 4.75 & 19.6 & 5.25 & 9.6 & 1\\
+        \hline
+        11 & 4.75 & 19.6 & 6.25 & 8.6 & 1\\
+        \hline
+        12 & 4.75 & 19.6 & 7.25 & 7.6 & 1\\
+        \hline
+        20 & 4.75 & 19.6 & 15.25 & 0.4 & 2\\
+        \hline
+        25 & 4.75 & 19.6 & 20.25 & 5.4 & 2\\
+        \hline
+        30 & 4.75 & 19.6 & 25.25 & 10.4 & 2\\
+        \hline 
+    \end{tabular}
+\\ [5pt]
+m1 = 7, m2 = 25
+
+\textcolor{purple}{\underline{Iteration 5:}} \\
+
+ \begin{tabular} {|c|c|c|c|c|c|}
+    \hline
+        xi & m1 & m2 & distance1 & distance2 & Nearest cluster \\
+        \hline
+        \hline
+        2 & 7 & 25 & 5 & 23 & 1\\
+        \hline
+        3 & 7 & 25 & 4 & 22 & 1\\
+        \hline
+        4 & 7 & 25 & 3 & 21 & 2\\ 
+        \hline
+        10 & 7 & 25 & 3 & 15 & 2\\
+        \hline
+        11 & 7 & 25 & 4 & 14 & 2\\
+        \hline
+        12 & 7 & 25 & 5 & 13 & 2\\
+        \hline
+        20 & 7 & 25 & 13 & 5 & 2\\
+        \hline
+        25 & 7 & 25 & 18 & 0 & 2\\
+        \hline
+        30 & 7 & 25 & 23 & 5 & 2\\
+        \hline 
+    \end{tabular}
+\\ [5pt]
+m1 = 7, m2 = 25
+\\ [10pt]
+There is no change between iteration 4 and 5. So the clusters are: k1 = \{2, 3, 4, 10, 11, 12\} and k2 = \{20, 25, 30\}, centroids are: m1 = 7 and m2 = 25.

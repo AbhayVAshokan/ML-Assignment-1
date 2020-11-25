@@ -2,19 +2,19 @@
 
 \textbf{\textcolor{LightMagenta}{Discuss the issues involved in decision tree learning.(May 2019, Qn 16 (b))\hfill (Mark 5)}} \\[5pt]
 \begin{enumerate}
-\item Overfitting the data: 
+\item \textcolor{purple}{Overfitting the data:}
  In decision-tree algorithms, it grows each branch of the tree just deeply enough to perfectly classify the training examples but it can lead to difficulties when there is noise in the data, or when the number of training examples is too small to produce a representative sample of the true target function. 
-     \item Handling continuous valued attributes:
+     \item \textcolor{purple}{Handling continuous valued attributes:}
       There are following restrictions to attributes for decision tree:
    - The target attribute whose value is predicted by the learned tree must be discrete            valued.
    - The attributes tested in the decision nodes of the tree must also be discrete valued.
    
-    \item Attributes with many values:
+    \item \textcolor{purple}{Attributes with many values:}
     There is a natural bias in the information gain measure that favors attributes with many values over those with few values.
 For example, In case of attribute date,it has so many possible values that it is bound to separate the training examples into very small subsets. Because of this, it will have a very high information gain relative to the training examples.
-    \item Handling missing attribute values:
+    \item \textcolor{purple}{Handling missing attribute values:}
     In certain cases, the available data may be missing values for some attributes. For example, in a medical domain in which we wish to predict the patient outcome based on various laboratory tests, it may be that the Blood-Test-Result is available only for a subset of the patients.
-    \item Handling attributes with differing costs:
+    \item \textcolor{purple}{Handling attributes with differing costs:}
     In some learning tasks, the instance attributes may have associated costs. For example, in learning to classify medical diseases we might describe patients in terms of attributes such as Temperature, Pulse, etc. These attributes vary significantly in their costs, both in terms of monetary cost and cost to patient comfort.
 \end{enumerate}
 
